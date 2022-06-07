@@ -44,6 +44,7 @@ def plot_cats(fnames, colors, labels, plotname, show):
         plt.savefig('compare_ksz_DR6_%s.png' % plotname)
         plt.close()
 
+    plt.figure()
     for j, fname in enumerate(fnames):
         jk = JK.load_JK(fname)
         plt.scatter(jk.rsep + 2*j,
@@ -56,6 +57,7 @@ def plot_cats(fnames, colors, labels, plotname, show):
     else:
         plt.savefig('errorbars_%s.pdf' % plotname)
         plt.savefig('errorbars_%s.png' % plotname)
+        plt.close()
 
 
 plot_cats(fnames_gt4p3, colors, labels, 'lum_gt_4p3', show=show)

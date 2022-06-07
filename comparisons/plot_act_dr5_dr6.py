@@ -59,6 +59,22 @@ def plot_cats(fnames, colors, labels, plotname, show):
         plt.savefig('errorbars_%s.png' % plotname)
         plt.close()
 
+    plt.figure()
+    jk_norm = JK.load_JK(fnames[2])
+    for j, fname in enumerate(fnames):
+        jk = JK.load_JK(fname)
+        plt.scatter(jk.rsep + 2*j,
+                    jk.errorbars/jk_norm.errorbars,
+                    label=labels[j])
+    plt.title(plotname)
+    plt.legend()
+    if show:
+        plt.show()
+    else:
+        plt.savefig('errorbars_fraction_%s.pdf' % plotname)
+        plt.savefig('errorbars_fraction_%s.png' % plotname)
+        plt.close()
+
 
 plot_cats(fnames_gt4p3, colors, labels, 'lum_gt_4p3', show=show)
 plot_cats(fnames_gt6p1, colors, labels, 'lum_gt_6p1', show=show)

@@ -10,10 +10,10 @@
 
 ## Catalog footprints
 Calafut 21
-![](../cat_plots/CALAFUT21_footprint.png)
+![](cat_plots/CALAFUT21_footprint.png)
 
 SDSS + DR6, wider coverage
-![](../cat_plots/DR6_SDSS_WIDERAREA_lum_gt_06p1_bs_dt.png)
+![](cat_plots/DR6_SDSS_WIDERAREA_lum_gt_06p1_bs_dt.png)
 
 ## Errorbars
 

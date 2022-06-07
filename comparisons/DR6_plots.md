@@ -20,3 +20,9 @@ SDSS + DR6, wider coverage
 ![](./errorbars_lum_gt_7p9.png)
 ![](./errorbars_lum_gt_6p1.png)
 ![](./errorbars_lum_gt_4p3.png)
+
+## Fractional errorbars_lum_gt_4p3
+
+![](./errorbars_fraction_lum_gt_7p9.png)
+![](./errorbars_fraction_lum_gt_6p1.png)
+![](./errorbars_fraction_lum_gt_4p3.png)

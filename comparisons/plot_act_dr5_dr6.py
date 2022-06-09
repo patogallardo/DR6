@@ -26,13 +26,18 @@ def plot_cats(fnames, colors, labels, plotname, show):
     plt.figure(figsize=[8, 4.5])
     for j, fname in enumerate(fnames):
         jk = JK.load_JK(fname)
+        zorder = j
+        if labels[j] == "DR6 wide":
+            zorder = 10
         plt.errorbar(x=jk.rsep + 2*j,
                      y=jk.kSZ_curveFullDataset,
                      yerr=jk.errorbars,
                      label=labels[j] + "N:%i" % jk.N_objects_in_this_run,
-                     marker='o',
+                     marker='.',
                      ls='',
-                     color=colors[j])
+                     color=colors[j],
+                     zorder=zorder,
+                     lw=2)
     plt.axhline(0, color='black')
     plt.legend()
     plt.ylim([-0.25, 0.2])
